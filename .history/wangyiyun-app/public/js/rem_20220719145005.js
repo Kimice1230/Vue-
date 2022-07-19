@@ -1,0 +1,3 @@
+function remSize(){
+    var deviceWidth=
+}
