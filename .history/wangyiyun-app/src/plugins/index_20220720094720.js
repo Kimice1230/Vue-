@@ -1,0 +1,1 @@
+import { Swipe, SwipeItem } from 'vant'
