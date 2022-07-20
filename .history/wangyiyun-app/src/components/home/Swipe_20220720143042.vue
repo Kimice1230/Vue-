@@ -1,7 +1,7 @@
 <template>
 <van-swipe :autoplay="3000">
   <van-swipe-item v-for="(image, index) in state.images" :key="index">
-    <img :src="image.pic" />
+    <img v-lazy="image" />
   </van-swipe-item>
 </van-swipe>
 </template>
@@ -13,7 +13,7 @@ export default {
     name:"Swipe",
     setup() {
      const state=reactive({
-      images:[
+      image:[
         'http://img.yzcdn.cn/1.jpg',
         'http://img.yzcdn.cn/2.jpg'
       ]
@@ -26,8 +26,7 @@ export default {
       onMounted(()=>{
         axios.get(api).then((res)=>{
           console.log(res);
-          state.images=res.data.banners;
-          console.log(state.images)
+          state.images=res.data.banners
         })
       })
       return{state}
@@ -37,10 +36,10 @@ export default {
 </script>
 
 <style lang="less">
-
+  #swiperTop{
     .van-swipe{
       width: 100%;
-      height: 3rem;
+      height: 1rem;
       .van-swipe-item{
         padding:0 0.2rem;
         img{
@@ -54,4 +53,5 @@ export default {
       }
       
     }
+  }
 </style>

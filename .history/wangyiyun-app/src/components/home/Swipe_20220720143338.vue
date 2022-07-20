@@ -37,10 +37,10 @@ export default {
 </script>
 
 <style lang="less">
-
+  #swiperTop{
     .van-swipe{
       width: 100%;
-      height: 3rem;
+      height: 1rem;
       .van-swipe-item{
         padding:0 0.2rem;
         img{
@@ -54,4 +54,5 @@ export default {
       }
       
     }
+  }
 </style>
