@@ -9,7 +9,7 @@
 <script>
 import TopNav from '../components/home/TopNav.vue'
 import SwipeTop from '../components/home/SwipeTop.vue'
-import IconList from '../components/home/IconList.vue'
+import IconList from ""
 
 export default {
     name:"Home",
@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style>
-  
+
 </style>
