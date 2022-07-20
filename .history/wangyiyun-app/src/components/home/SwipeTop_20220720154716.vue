@@ -7,28 +7,37 @@
 </template>
 
 <script>
-import {reactive,onMounted} from 'vue'
+// import axios from 'axios';
+import {reactive,onMounted} from 'vue';
+import {getBanner} from '@/request/api/home.js';
 
 export default {
-    name:"Swipe",
+    name:"SwipeTop",
     setup() {
      const state=reactive({
       images:[
         'http://img.yzcdn.cn/1.jpg',
         'http://img.yzcdn.cn/2.jpg'
       ]
-     }
-      
-      );
-      const axios=require('axios');
-      const api='http://localhost:3000/banner?type=2'
+     });
+      // const axios=require('axios');
+      // const api='http://localhost:3000/banner?type=2'
       // axios.defaults.withCredentials= true;
-      onMounted(()=>{
-        axios.get(api).then((res)=>{
-          console.log(res);
+      
+      onMounted(async ()=>{
+        // axios.get(api).then((res)=>{
+        //   console.log(res);
+        //   state.images=res.data.banners;
+        //   console.log(state.images)
+        // })
+        try{
+          let res= await getBanner();
           state.images=res.data.banners;
-          console.log(state.images)
-        })
+          console.log(res)    
+        }catch(error){
+          error.message
+        }
+        
       })
       return{state}
     }

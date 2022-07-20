@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <TopNav/>
-    <SwipeTop/>
+    <Swipe/>
   </div>
 </template>
 

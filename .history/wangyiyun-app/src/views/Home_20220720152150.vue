@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <TopNav/>
-    <SwipeTop/>
+    <Swipe/>
   </div>
 </template>
 
 <script>
 import TopNav from '../components/home/TopNav.vue'
-import SwipeTop from '../components/home/SwipeTop.vue'
+import Swipe from '../components/home/SwiperTop.vue'
 
 
 export default {

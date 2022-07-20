@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <TopNav/>
-    <SwipeTop/>
+    <Swipe/>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import SwipeTop from '../components/home/SwipeTop.vue'
 export default {
     name:"Home",
     components:{
-        TopNav,SwipeTop
+        TopNav,SwiperTop
     }
 }
 </script>
