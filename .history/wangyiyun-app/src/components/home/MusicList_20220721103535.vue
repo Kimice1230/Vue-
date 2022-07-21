@@ -77,10 +77,10 @@ setup(){
         }catch(error){
             console.log(error.message)
         };
-        
-    }   
+        return {state,changeCount}
+    }
+
     )
-    return {state,changeCount}
 }
 }
 

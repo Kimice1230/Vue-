@@ -28,35 +28,39 @@
 
 <script>
 import { getMusicList } from "@/request/api/home.js";
-import { reactive,onMounted  } from 'vue';
+import { reactive } from '@vue/reactivity';
+import { onMounted } from '@vue/runtime-core';
+
 
 export default {
-//   data() {
-//     return {
-//       musicList: [],
-//     };
-//   },
-//   methods: {
-//     async getGedan() {
-//       try {
-//         let res = await getMusicList();
-//         console.log(res);
-//         this.musicList = res.data.result;
-//       } catch (error) {
-//         console.log(error.message);
-//       }
-//     },
-//     changeCount:function(num){
-//         if(num>10000000){
-//             return (num/10000000).toFixed(1)+"亿"
-//         }else if (num>=1000){
-//             return (num/1000).toFixed(1)+"万"
-//         }
-//     }
-//   },
-//   mounted() {
-//     this.getGedan();
-//   }
+  data() {
+    return {
+      musicList: [],
+    };
+  },
+  methods: {
+    async getGedan() {
+      try {
+        let res = await getMusicList();
+        console.log(res);
+        this.musicList = res.data.result;
+      } catch (error) {
+        console.log(error.message);
+      }
+    },
+    changeCount:function(num){
+        if(num>10000000){
+            return (num/10000000).toFixed(1)+"亿"
+        }else if (num>=1000){
+            return (num/1000).toFixed(1)+"万"
+        }
+    }
+  },
+  mounted() {
+    this.getGedan();
+  }
+};
+
 setup(){
     const state=reactive({
         musicList:[],
@@ -72,19 +76,16 @@ setup(){
     onMounted(async()=>{
         try{
             let res= await getMusicList();
-            state.musicList=res.data.result;
             console.log(res);
+            state.musicList=res.data.result;
         }catch(error){
             console.log(error.message)
         };
-        
-    }   
+        return {state,changeCount}
+    }
+
     )
-    return {state,changeCount}
-}
-}
-
-
+};
 </script>
 
 <style lang="less" scoped>

@@ -78,9 +78,8 @@ setup(){
             console.log(error.message)
         };
         
-    }   
+    
     )
-    return {state,changeCount}
 }
 }
 

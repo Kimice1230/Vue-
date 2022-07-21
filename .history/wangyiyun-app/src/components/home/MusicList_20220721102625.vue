@@ -28,7 +28,9 @@
 
 <script>
 import { getMusicList } from "@/request/api/home.js";
-import { reactive,onMounted  } from 'vue';
+import { reactive } from '@vue/reactivity';
+import { onMounted } from '@vue/runtime-core';
+
 
 export default {
 //   data() {
@@ -57,31 +59,6 @@ export default {
 //   mounted() {
 //     this.getGedan();
 //   }
-setup(){
-    const state=reactive({
-        musicList:[],
-    });
-
-    function changeCount(num){
-        if(num>10000000){
-            return (num/10000000).toFixed(1)+"亿"
-        }else if (num>=1000){
-            return (num/1000).toFixed(1)+"万"
-        }
-    }
-    onMounted(async()=>{
-        try{
-            let res= await getMusicList();
-            state.musicList=res.data.result;
-            console.log(res);
-        }catch(error){
-            console.log(error.message)
-        };
-        
-    }   
-    )
-    return {state,changeCount}
-}
 }
 
 

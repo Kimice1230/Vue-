@@ -11,7 +11,7 @@
         :width="150"
         :show-indicators="false"
       >
-        <van-swipe-item v-for="item in state.musicList" :key="item">
+        <van-swipe-item v-for="item in musicList" :key="item">
           <img :src="item.picUrl" alt="" />
           <span class="playCount">
             <svg class="icon" aria-hidden="true">
@@ -28,8 +28,6 @@
 
 <script>
 import { getMusicList } from "@/request/api/home.js";
-import { reactive,onMounted  } from 'vue';
-
 export default {
 //   data() {
 //     return {
@@ -56,35 +54,8 @@ export default {
 //   },
 //   mounted() {
 //     this.getGedan();
-//   }
-setup(){
-    const state=reactive({
-        musicList:[],
-    });
-
-    function changeCount(num){
-        if(num>10000000){
-            return (num/10000000).toFixed(1)+"亿"
-        }else if (num>=1000){
-            return (num/1000).toFixed(1)+"万"
-        }
-    }
-    onMounted(async()=>{
-        try{
-            let res= await getMusicList();
-            state.musicList=res.data.result;
-            console.log(res);
-        }catch(error){
-            console.log(error.message)
-        };
-        
-    }   
-    )
-    return {state,changeCount}
-}
-}
-
-
+//   },
+// };
 </script>
 
 <style lang="less" scoped>
@@ -116,5 +87,4 @@ setup(){
     }
   }
 }
-
 </style>
