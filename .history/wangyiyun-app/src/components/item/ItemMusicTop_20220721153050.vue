@@ -1,9 +1,9 @@
 <template>
-<div class="itemMusicTop">
+          <div class="itemMusicTop">
     <img :src="playlist.coverImgUrl" alt="" class="bgimg" />
     <div class="itemLeft">
       <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
-        <use xlink:href="#icon-caidan"></use>
+        <use xlink:href="#icon-zuojiantou"></use>
       </svg>
       <span>歌单</span>
     </div>
@@ -58,13 +58,13 @@
     </div>
     <div class="footerItem">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
+        <use xlink:href="#icon-iconfontzhizuobiaozhun023146"></use>
       </svg>
       <span>下载</span>
     </div>
     <div class="footerItem">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
+        <use xlink:href="#icon-show_duoxuan"></use>
       </svg>
       <span>多选</span>
     </div>
@@ -78,16 +78,13 @@ export default {
             props.playlist.creator=JSON.parse(sessionStorage.getItem().playlist).creator
         }
 //对播放量的处理
-        function changeCount(num){
-        if(num>10000000){
-            return (num/10000000).toFixed(1)+"亿"
-        }else if (num>=1000){
-            return (num/1000).toFixed(1)+"万"
-        }
-        
-    }
-    return {changeCount}
-
+    //     function changeCount(num){
+    //     if(num>10000000){
+    //         return (num/10000000).toFixed(1)+"亿"
+    //     }else if (num>=1000){
+    //         return (num/1000).toFixed(1)+"万"
+    //     }
+    // }
     },
     
     props:['playlist']

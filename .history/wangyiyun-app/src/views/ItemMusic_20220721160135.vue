@@ -1,6 +1,6 @@
 <template>
   <ItemMusicTop :playlist="state.playlist" />
-  <ItemMusicList :itemList="state.itemList" :subscribedCount="state.playlist.subscribedCount"/>
+  <ItemMusicList :itemList="state.itemList" :subscribedCount/>
 </template>
 
 <script>

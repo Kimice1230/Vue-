@@ -28,7 +28,7 @@
         </div>
         <div class="itemRight">
           <svg class="icon bofang" aria-hidden="true" v-if='item.mv !=0'>
-            <use xlink:href="#icon-sousuo"></use>
+            <use xlink:href="#icon-shipin"></use>
           </svg>
           <svg class="icon liebiao" aria-hidden="true">
             <use xlink:href="#icon-sousuo"></use>

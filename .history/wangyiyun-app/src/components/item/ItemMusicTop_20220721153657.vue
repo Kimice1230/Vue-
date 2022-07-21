@@ -77,7 +77,7 @@ export default {
         if((props.playlist.creator="")){
             props.playlist.creator=JSON.parse(sessionStorage.getItem().playlist).creator
         }
-//对播放量的处理
+对播放量的处理
         function changeCount(num){
         if(num>10000000){
             return (num/10000000).toFixed(1)+"亿"

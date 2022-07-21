@@ -1,5 +1,5 @@
 <template>
-<div class="itemMusicTop">
+  <div class="itemMusicTop">
     <img :src="playlist.coverImgUrl" alt="" class="bgimg" />
     <div class="itemLeft">
       <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
@@ -73,29 +73,28 @@
 
 <script>
 export default {
-    setup(props){
-        if((props.playlist.creator="")){
-            props.playlist.creator=JSON.parse(sessionStorage.getItem().playlist).creator
-        }
-//对播放量的处理
-        function changeCount(num){
-        if(num>10000000){
-            return (num/10000000).toFixed(1)+"亿"
-        }else if (num>=1000){
-            return (num/1000).toFixed(1)+"万"
-        }
-        
+  setup(props) {
+    if ((props.playlist.creator = "")) {
+      props.playlist.creator = JSON.parse(
+        sessionStorage.getItem().playlist
+      ).creator;
     }
-    return {changeCount}
+    //对播放量的处理
+    //     function changeCount(num){
+    //     if(num>10000000){
+    //         return (num/10000000).toFixed(1)+"亿"
+    //     }else if (num>=1000){
+    //         return (num/1000).toFixed(1)+"万"
+    //     }
+    // }
+  },
 
-    },
-    
-    props:['playlist']
-}
+  props: ["playlist"],
+};
 </script>
 
 <style lang="less" scoped>
-   .itemMusicTop {
+.itemMusicTop {
   width: 100%;
   height: 1rem;
   display: flex;
@@ -220,24 +219,23 @@ export default {
     }
   }
 }
-.itemTopFooter{
+.itemTopFooter {
   width: 100%;
   height: 1.4rem;
   display: flex;
   justify-content: space-around;
-  margin-top: .2rem;
-  .footerItem{
+  margin-top: 0.2rem;
+  .footerItem {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    .icon{
+    .icon {
       fill: #fff;
     }
-    span{
-      margin-top: .1rem;
+    span {
+      margin-top: 0.1rem;
     }
   }
-
 }
 </style>

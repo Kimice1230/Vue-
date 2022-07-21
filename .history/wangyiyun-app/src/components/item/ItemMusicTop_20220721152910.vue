@@ -1,74 +1,22 @@
 <template>
-<div class="itemMusicTop">
-    <img :src="playlist.coverImgUrl" alt="" class="bgimg" />
-    <div class="itemLeft">
-      <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
-        <use xlink:href="#icon-caidan"></use>
-      </svg>
-      <span>歌单</span>
-    </div>
-    <div class="itemRight">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-sousuo"></use>
-      </svg>
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-candan"></use>
-      </svg>
-    </div>
-  </div>
-  <div class="itemTopContent">
-    <div class="contentLeft">
-      <img :src="playlist.coverImgUrl" alt="" />
-      <div class="palyCount">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
-        </svg>
-        <span>{{ changeCount(playlist.playCount) }}</span>
-      </div>
-    </div>
-    <div class="contentRight">
-      <p class="rightP_one">{{ playlist.name }}</p>
-      <div class="right_img">
-        <img :src="playlist.creator.backgroundUrl" alt="" />
-        <span>{{ playlist.creator.nickname }}</span>
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
-        </svg>
-      </div>
-      <p class="rightP_two">
-        <span>{{ playlist.description }}</span>
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
-        </svg>
-      </p>
-    </div>
-  </div>
-  <div class="itemTopFooter">
-    <div class="footerItem">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
-      </svg>
-      <span>{{ playlist.commentCount }}</span>
-    </div>
-    <div class="footerItem">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
-      </svg>
-      <span>{{ playlist.shareCount }}</span>
-    </div>
-    <div class="footerItem">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
-      </svg>
-      <span>下载</span>
-    </div>
-    <div class="footerItem">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
-      </svg>
-      <span>多选</span>
-    </div>
-  </div>
+        <div class="itemMusicTop">
+            <img :src="playlist.coverImgUrl" alt="" class="bgimg">
+            <div class="itemLeft">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-caidan"></use>
+                </svg>
+                <span>歌单</span>
+            </div>
+            <div class="itemRight">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-caidan"></use>
+                </svg>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-caidan"></use>
+                </svg>
+            </div>
+        </div>
+
 </template>
 
 <script>
@@ -78,16 +26,13 @@ export default {
             props.playlist.creator=JSON.parse(sessionStorage.getItem().playlist).creator
         }
 //对播放量的处理
-        function changeCount(num){
-        if(num>10000000){
-            return (num/10000000).toFixed(1)+"亿"
-        }else if (num>=1000){
-            return (num/1000).toFixed(1)+"万"
-        }
-        
-    }
-    return {changeCount}
-
+    //     function changeCount(num){
+    //     if(num>10000000){
+    //         return (num/10000000).toFixed(1)+"亿"
+    //     }else if (num>=1000){
+    //         return (num/1000).toFixed(1)+"万"
+    //     }
+    // }
     },
     
     props:['playlist']

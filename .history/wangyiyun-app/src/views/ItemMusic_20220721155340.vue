@@ -1,6 +1,6 @@
 <template>
   <ItemMusicTop :playlist="state.playlist" />
-  <ItemMusicList :itemList="state.itemList" :subscribedCount="state.playlist.subscribedCount"/>
+  <ItemMusicList :itemList="state.itemList"/>
 </template>
 
 <script>
@@ -35,8 +35,7 @@ export default {
                 
                 //获取歌曲
                 state.itemList=res.data.playlist.tracks;
-                console.log(res.data.playlist.tracks)
-                console.log(state.itemList[0].name);
+                console.log(state.itemList);
                 //获取歌曲id
                 // let songsId=[]   
                 // for (let id in songs){

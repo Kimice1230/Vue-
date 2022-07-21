@@ -1,16 +1,17 @@
 <template>
-  <div class="itemMusicList">
+   <div class="itemMusicList">
     <div class="itemListTop">
       <div class="listLeft">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
+          <use xlink:href="#icon-bofanganniu"></use>
         </svg>
-        <span>播放全部<span>(共{{ itemList.length }}首)</span></span
+        <span
+          >播放全部<span>(共{{ itemList.length }}首)</span></span
         >
       </div>
       <div class="listRight">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
+          <use xlink:href="#icon-jiahao"></use>
         </svg>
         <span>收藏({{ subscribedCount }})</span>
       </div>
@@ -28,19 +29,19 @@
         </div>
         <div class="itemRight">
           <svg class="icon bofang" aria-hidden="true" v-if='item.mv !=0'>
-            <use xlink:href="#icon-sousuo"></use>
+            <use xlink:href="#icon-shipin"></use>
           </svg>
           <svg class="icon liebiao" aria-hidden="true">
-            <use xlink:href="#icon-sousuo"></use>
+            <use xlink:href="#icon-31liebiao"></use>
           </svg>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script>
-// import { mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 export default {
   setup(props) {
     console.log(props);

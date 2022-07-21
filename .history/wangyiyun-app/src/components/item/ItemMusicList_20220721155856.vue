@@ -3,21 +3,21 @@
     <div class="itemListTop">
       <div class="listLeft">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
+          <use xlink:href="#icon-"></use>
         </svg>
         <span>播放全部<span>(共{{ itemList.length }}首)</span></span
         >
       </div>
       <div class="listRight">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-caidan"></use>
+          <use xlink:href="#icon-jiahao"></use>
         </svg>
         <span>收藏({{ subscribedCount }})</span>
       </div>
     </div>
     <div class="itemList">
       <div class="item" v-for="(item, i) in itemList" :key="i">
-        <div class="itemLeft" @click="playMusic(i)">
+        <!-- <div class="itemLeft" @click="playMusic(i)">
           <span class="leftSpan">{{ i + 1 }}</span>
           <div>
             <p>{{ item.name }}</p>
@@ -25,15 +25,15 @@
               item1.name
             }}</span>
           </div>
-        </div>
-        <div class="itemRight">
+        </div> -->
+        <!-- <div class="itemRight">
           <svg class="icon bofang" aria-hidden="true" v-if='item.mv !=0'>
-            <use xlink:href="#icon-sousuo"></use>
+            <use xlink:href="#icon-shipin"></use>
           </svg>
           <svg class="icon liebiao" aria-hidden="true">
-            <use xlink:href="#icon-sousuo"></use>
+            <use xlink:href="#icon-31liebiao"></use>
           </svg>
-        </div>
+        </div> -->
       </div>
     </div>
   </div> -->
