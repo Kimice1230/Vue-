@@ -8,12 +8,4 @@ export function getBanner(){
     }
     )
 }
-//获取好歌单
-export function getMusicList(){
-    return service(
-        {
-        method:"GET",
-        url:"/personalized?limit=10"
-    }
-    )
-}
+//获取 

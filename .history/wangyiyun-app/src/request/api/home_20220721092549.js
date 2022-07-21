@@ -9,7 +9,7 @@ export function getBanner(){
     )
 }
 //获取好歌单
-export function getMusicList(){
+export function getMuisicList(){
     return service(
         {
         method:"GET",
