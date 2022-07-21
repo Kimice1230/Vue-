@@ -14,7 +14,7 @@
     height: .5rem;
   }
   a{
-    color:black;
+    color
   }
   // .icon{
     

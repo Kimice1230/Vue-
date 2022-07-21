@@ -10,11 +10,8 @@
     
   }
   .icon{
-    width: .5rem;
-    height: .5rem;
-  }
-  a{
-    color:black;
+    width: .5rem
+    ;
   }
   // .icon{
     

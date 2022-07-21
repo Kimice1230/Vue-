@@ -10,11 +10,7 @@
     
   }
   .icon{
-    width: .5rem;
-    height: .5rem;
-  }
-  a{
-    color:black;
+    wd
   }
   // .icon{
     

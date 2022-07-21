@@ -13,9 +13,6 @@
     width: .5rem;
     height: .5rem;
   }
-  a{
-    color:black;
-  }
   // .icon{
     
   // }

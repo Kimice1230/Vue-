@@ -9,13 +9,6 @@
     box-sizing: border-box; 
     
   }
-  .icon{
-    width: .5rem;
-    height: .5rem;
-  }
-  a{
-    color:black;
-  }
   // .icon{
     
   // }

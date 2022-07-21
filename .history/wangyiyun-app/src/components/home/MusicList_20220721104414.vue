@@ -12,7 +12,7 @@
         :show-indicators="false"
       >
         <van-swipe-item v-for="item in state.musicList" :key="item">
-        <router-link :to="{path:'/itemMusic',query:{id:item.id}}">
+            <router-link >
           <img :src="item.picUrl" alt="" />
           <span class="playCount">
             <svg class="icon" aria-hidden="true">
