@@ -1,5 +1,5 @@
 <template>
-  <ItemMusicTop :playlist="state.playlist" />
+  <div>歌单详情页</div>
 </template>
 
 <script>
@@ -27,9 +27,7 @@ export default {
         })
         return {state}
     },
-    components:{
-        ItemMusicTop 
-    }
+    compo
 }
 </script>
 

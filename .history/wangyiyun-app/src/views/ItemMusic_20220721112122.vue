@@ -1,5 +1,5 @@
 <template>
-  <ItemMusicTop :playlist="state.playlist" />
+  <ItemMusicTop :playlist="state.playlist" ItemMusicTop >
 </template>
 
 <script>
